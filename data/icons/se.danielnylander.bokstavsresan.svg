@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="letter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffecd2"/>
+      <stop offset="100%" stop-color="#fcb69f"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="24" fill="url(#bg)"/>
+  <!-- Stars decoration -->
+  <text x="20" y="28" font-size="16" fill="#ffd700" opacity="0.8">⭐</text>
+  <text x="95" y="25" font-size="12" fill="#ffd700" opacity="0.6">✨</text>
+  <text x="100" y="110" font-size="14" fill="#ffd700" opacity="0.7">🌟</text>
+  <!-- Letter A/B stylized -->
+  <text x="64" y="82" font-size="64" font-weight="bold" fill="url(#letter)" text-anchor="middle" font-family="sans-serif">Aa</text>
+  <!-- Sound wave -->
+  <path d="M 18 95 Q 25 85 32 95 Q 39 105 46 95" stroke="#ffecd2" stroke-width="3" fill="none" opacity="0.7"/>
+  <circle cx="14" cy="95" r="4" fill="#ffecd2" opacity="0.7"/>
+</svg>

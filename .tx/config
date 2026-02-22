@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[o:danielnylander:p:bokstavsresan:r:bokstavsresan-pot]
+file_filter = po/<lang>.po
+source_file = po/bokstavsresan.pot
+source_lang = en
+type = PO

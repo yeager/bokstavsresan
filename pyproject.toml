@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+[project]
+name = "bokstavsresan"
+version = "0.1.0"
+description = "Phonetics and letter learning game for children with dyspraxia"
+authors = [{name = "Daniel Nylander", email = "daniel@danielnylander.se"}]
+license = {text = "GPL-3.0-or-later"}
+requires-python = ">=3.10"
+dependencies = ["PyGObject>=3.42"]
+[project.gui-scripts]
+bokstavsresan = "bokstavsresan.main:main"
+[tool.setuptools.packages.find]
+where = ["src"]
