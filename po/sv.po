@@ -1,0 +1,3 @@
+# Swedish translation for bokstavsresan
+msgid ""
+msgstr ""

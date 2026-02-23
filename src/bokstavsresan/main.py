@@ -34,13 +34,14 @@ LETTER_PHONETICS = {
 }
 
 # Short phonetic sounds (how the letter sounds in a word)
+# Elongated for TTS clarity — children with verbal dyspraxia need slow, clear phonemes
 LETTER_SOUNDS = {
-    "A": "a", "B": "b", "C": "s", "D": "d", "E": "e",
-    "F": "f", "G": "g", "H": "h", "I": "i", "J": "j",
-    "K": "k", "L": "l", "M": "m", "N": "n", "O": "o",
-    "P": "p", "Q": "k", "R": "r", "S": "s", "T": "t",
-    "U": "u", "V": "v", "W": "v", "X": "ks", "Y": "y",
-    "Z": "s", "Å": "å", "Ä": "ä", "Ö": "ö",
+    "A": "aaa", "B": "bbb", "C": "sss", "D": "ddd", "E": "eee",
+    "F": "fff", "G": "ggg", "H": "hhh", "I": "iii", "J": "jjj",
+    "K": "kkk", "L": "lll", "M": "mmm", "N": "nnn", "O": "ooo",
+    "P": "ppp", "Q": "kkk", "R": "rrr", "S": "sss", "T": "ttt",
+    "U": "uuu", "V": "vvv", "W": "vvv", "X": "ks", "Y": "yyy",
+    "Z": "sss", "Å": "ååå", "Ä": "äää", "Ö": "ööö",
 }
 
 # Simple Swedish words grouped by difficulty
@@ -103,7 +104,9 @@ def _speak(text, engine=None):
     try:
         if engine == "piper":
             proc = subprocess.Popen(
-                ["piper", "--model", "sv_SE-nst-medium", "--output-raw"],
+                ["piper", "--model",
+                 os.path.expanduser("~/.local/share/piper-voices/sv_SE-nst-medium.onnx"),
+                 "--output-raw", "--length-scale", "1.5"],
                 stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
             )
             audio, _ = proc.communicate(text.encode(), timeout=10)
@@ -733,8 +736,14 @@ class App(Adw.Application):
                 "communication and daily structure."
             ),
         )
-        about.add_link(_("Autismappar"), "https://www.autismappar.se")
-        about.add_link(_("Help translate"), "https://app.transifex.com/danielnylander/bokstavsresan")
+        about.add_credit_section(_("Thanks to"), [
+            "GTK https://gtk.org",
+            "libadwaita https://gnome.pages.gitlab.gnome.org/libadwaita/",
+            "Python https://python.org",
+            "Transifex https://transifex.com",
+            "Piper TTS https://github.com/rhasspy/piper",
+            "espeak-ng https://github.com/espeak-ng/espeak-ng",
+        ])
         about.present(self.props.active_window)
 
     def _on_icon_clicked(self, *args):

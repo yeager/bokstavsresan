@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.backends._legacy:_Backend"
 [project]
 name = "bokstavsresan"
-version = "0.1.0"
+version = "0.1.1"
 description = "Phonetics and letter learning game for children with dyspraxia"
 authors = [{name = "Daniel Nylander", email = "daniel@danielnylander.se"}]
 license = {text = "GPL-3.0-or-later"}
