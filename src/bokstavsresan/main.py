@@ -209,6 +209,10 @@ class App(Adw.Application):
         self.target_letter = None
         self.current_word = None
         self.current_word_idx = 0
+        
+        # Easter egg state
+        self._egg_clicks = 0
+        self._egg_timer = None
 
     def _on_activate(self, app):
         self.win = Adw.ApplicationWindow(application=app)
@@ -258,6 +262,15 @@ class App(Adw.Application):
 
         # Header bar
         self.header = Adw.HeaderBar()
+        
+        # Add clickable app icon for easter egg
+        app_btn = Gtk.Button()
+        app_btn.set_icon_name(APP_ID)
+        app_btn.add_css_class("flat")
+        app_btn.set_tooltip_text(_("Bokstavsresan"))
+        app_btn.connect("clicked", self._on_icon_clicked)
+        self.header.pack_start(app_btn)
+        
         menu_btn = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
         self.header.pack_end(menu_btn)
 
@@ -723,6 +736,50 @@ class App(Adw.Application):
         about.add_link(_("Autismappar"), "https://www.autismappar.se")
         about.add_link(_("Help translate"), "https://app.transifex.com/danielnylander/bokstavsresan")
         about.present(self.props.active_window)
+
+    def _on_icon_clicked(self, *args):
+        """Handle clicks on app icon for easter egg."""
+        self._egg_clicks += 1
+        if self._egg_timer:
+            GLib.source_remove(self._egg_timer)
+        self._egg_timer = GLib.timeout_add(500, self._reset_egg)
+        if self._egg_clicks >= 7:
+            self._trigger_easter_egg()
+            self._egg_clicks = 0
+
+    def _reset_egg(self):
+        """Reset easter egg click counter."""
+        self._egg_clicks = 0
+        self._egg_timer = None
+        return False
+
+    def _trigger_easter_egg(self):
+        """Show the secret easter egg!"""
+        try:
+            # Play a fun sound
+            import subprocess
+            subprocess.Popen(['paplay', '/usr/share/sounds/freedesktop/stereo/complete.oga'], 
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        except:
+            # Fallback beep
+            try:
+                subprocess.Popen(['pactl', 'play-sample', 'bell'], 
+                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            except:
+                pass
+
+        # Show confetti message
+        toast = Adw.Toast.new(_("🎉 Du hittade hemligheten!"))
+        toast.set_timeout(3)
+        
+        # Create toast overlay if it doesn't exist
+        if not hasattr(self, '_toast_overlay'):
+            content = self.win.get_content()
+            self._toast_overlay = Adw.ToastOverlay()
+            self._toast_overlay.set_child(content)
+            self.win.set_content(self._toast_overlay)
+        
+        self._toast_overlay.add_toast(toast)
 
 
 def main():
