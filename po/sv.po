@@ -1,3 +1,395 @@
-# Swedish translation for bokstavsresan
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the bokstavsresan package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2026
+# 
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: bokstavsresan\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-23 11:03+0100\n"
+"PO-Revision-Date: 2026-02-22 20:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
+"Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/305252/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/bokstavsresan/main.py:49
+msgid "sun"
+msgstr "sol"
+
+#: src/bokstavsresan/main.py:49 src/bokstavsresan/main.py:57
+msgid "cat"
+msgstr "katt"
+
+#: src/bokstavsresan/main.py:49
+msgid "house"
+msgstr "hus"
+
+#: src/bokstavsresan/main.py:50
+msgid "car"
+msgstr "bil"
+
+#: src/bokstavsresan/main.py:50
+msgid "mouse"
+msgstr "mus"
+
+#: src/bokstavsresan/main.py:50
+msgid "hair"
+msgstr "hår"
+
+#: src/bokstavsresan/main.py:51
+msgid "boat"
+msgstr "båt"
+
+#: src/bokstavsresan/main.py:51
+msgid "eye"
+msgstr "öga"
+
+#: src/bokstavsresan/main.py:51
+msgid "arm"
+msgstr "arm"
+
+#: src/bokstavsresan/main.py:52
+msgid "leg"
+msgstr "ben"
+
+#: src/bokstavsresan/main.py:52
+msgid "lock"
+msgstr "lås"
+
+#: src/bokstavsresan/main.py:52
+msgid "nose"
+msgstr "näsa"
+
+#: src/bokstavsresan/main.py:56
+msgid "ball"
+msgstr "boll"
+
+#: src/bokstavsresan/main.py:56
+msgid "lamb"
+msgstr "lamm"
+
+#: src/bokstavsresan/main.py:56
+msgid "fish"
+msgstr "fisk"
+
+#: src/bokstavsresan/main.py:57
+msgid "pig"
+msgstr "gris"
+
+#: src/bokstavsresan/main.py:57
+msgid "dog"
+msgstr "hund"
+
+#: src/bokstavsresan/main.py:58
+msgid "chair"
+msgstr "stol"
+
+#: src/bokstavsresan/main.py:58
+msgid "door"
+msgstr "dörr"
+
+#: src/bokstavsresan/main.py:58
+msgid "leaf"
+msgstr "löv"
+
+#: src/bokstavsresan/main.py:59
+msgid "kind"
+msgstr "snäll"
+
+#: src/bokstavsresan/main.py:59
+msgid "happy"
+msgstr "glad"
+
+#: src/bokstavsresan/main.py:59
+msgid "big"
+msgstr "stor"
+
+#: src/bokstavsresan/main.py:63
+msgid "apple"
+msgstr "äpple"
+
+#: src/bokstavsresan/main.py:63
+msgid "school"
+msgstr "skola"
+
+#: src/bokstavsresan/main.py:63
+msgid "bear"
+msgstr "björn"
+
+#: src/bokstavsresan/main.py:64
+msgid "flower"
+msgstr "blomma"
+
+#: src/bokstavsresan/main.py:64
+msgid "star"
+msgstr "stjärna"
+
+#: src/bokstavsresan/main.py:64
+msgid "tree"
+msgstr "träd"
+
+#: src/bokstavsresan/main.py:65
+msgid "sing"
+msgstr "sjunga"
+
+#: src/bokstavsresan/main.py:65
+msgid "sky"
+msgstr "himmel"
+
+#: src/bokstavsresan/main.py:65
+msgid "water"
+msgstr "vatten"
+
+#: src/bokstavsresan/main.py:69
+msgid "Great job! ⭐"
+msgstr "Bra jobbat! ⭐"
+
+#: src/bokstavsresan/main.py:69
+msgid "Fantastic! 🌟"
+msgstr "Fantastiskt! 🌟"
+
+#: src/bokstavsresan/main.py:69
+msgid "You're a star! ✨"
+msgstr "Du är bäst! ✨"
+
+#: src/bokstavsresan/main.py:70
+msgid "Amazing! 🎉"
+msgstr "Otroligt bra! 🎉"
+
+#: src/bokstavsresan/main.py:70
+msgid "Well done! 👏"
+msgstr "Bra jobbat! 👏"
+
+#: src/bokstavsresan/main.py:70
+msgid "Keep going! 💪"
+msgstr "Fortsätt så! 💪"
+
+#: src/bokstavsresan/main.py:71
+msgid "Super! 🚀"
+msgstr "Super! 🚀"
+
+#: src/bokstavsresan/main.py:71
+msgid "Brilliant! 🌈"
+msgstr "Briljant! 🌈"
+
+#: src/bokstavsresan/main.py:71
+msgid "You did it! 🎊"
+msgstr "Du klarade det! 🎊"
+
+#: src/bokstavsresan/main.py:72
+msgid "Wow, incredible! 🏆"
+msgstr "Wow, grymt! 🏆"
+
+#: src/bokstavsresan/main.py:72
+msgid "Perfect! 💯"
+msgstr "Perfekt! 💯"
+
+#: src/bokstavsresan/main.py:72
+msgid "Champion! 🥇"
+msgstr "Du är en mästare! 🥇"
+
+#: src/bokstavsresan/main.py:76
+msgid "Almost! Try again! 💪"
+msgstr "Nästan! Försök igen! 💪"
+
+#: src/bokstavsresan/main.py:76
+msgid "So close! One more time! 🌟"
+msgstr "Så nära! En gång till! 🌟"
+
+#: src/bokstavsresan/main.py:77
+msgid "You can do it! 🎯"
+msgstr "Du kan klara det! 🎯"
+
+#: src/bokstavsresan/main.py:77
+msgid "Don't give up! Keep trying! 💫"
+msgstr "Ge inte upp! Fortsätt! 💫"
+
+#: src/bokstavsresan/main.py:222 src/bokstavsresan/main.py:348
+#: src/bokstavsresan/main.py:720
+msgid "Letter Journey"
+msgstr "Bokstavsresan"
+
+#: src/bokstavsresan/main.py:263
+msgid "About"
+msgstr "Om"
+
+#: src/bokstavsresan/main.py:264
+msgid "Quit"
+msgstr "Avsluta"
+
+#: src/bokstavsresan/main.py:273
+msgid "Bokstavsresan"
+msgstr "Bokstavsresan"
+
+#: src/bokstavsresan/main.py:324
+msgid "Welcome to Letter Journey! 🎉"
+msgstr "Välkommen till Bokstavsresan! 🎉"
+
+#: src/bokstavsresan/main.py:326
+msgid ""
+"Learn letters and sounds through fun games!\n"
+"\n"
+"🔤 Explore — Tap letters to hear how they sound\n"
+"🎯 Find the Letter — Listen and find the right one\n"
+"📖 Sound Out — Break words into letter sounds\n"
+"\n"
+"You earn ⭐ stars for every correct answer.\n"
+"Keep your 🔥 streak going for bonus stars!\n"
+"\n"
+"Let's go! 💪"
+msgstr ""
+"Lär dig bokstäver och ljud genom roliga spel!\n"
+"\n"
+"🔤 Utforska — Tryck på bokstäverna för att höra hur de låter\n"
+"🎯 Hitta bokstaven — Lyssna och hitta rätt bokstav\n"
+"📖 Ljud — Dela upp ord i bokstavsljud\n"
+"\n"
+"Du får ⭐ stjärnor för varje rätt svar.\n"
+"Håll din 🔥 svit igång för att få bonusstjärnor!\n"
+"\n"
+"Nu kör vi! 💪"
+
+#: src/bokstavsresan/main.py:335
+msgid "Let's start! 🚀"
+msgstr "Nu kör vi! 🚀"
+
+#: src/bokstavsresan/main.py:352
+msgid "Choose your adventure! 🗺️"
+msgstr "Välj ditt äventyr! 🗺️"
+
+#: src/bokstavsresan/main.py:358
+msgid "Level"
+msgstr "Nivå"
+
+#: src/bokstavsresan/main.py:364
+msgid "Explore Letters"
+msgstr "Utforska bokstäver"
+
+#: src/bokstavsresan/main.py:365
+msgid "Tap letters to hear their name and sound"
+msgstr "Klicka på bokstäver för att höra deras namn och ljud"
+
+#: src/bokstavsresan/main.py:366
+msgid "Find the Letter"
+msgstr "Hitta bokstaven"
+
+#: src/bokstavsresan/main.py:367
+msgid "Listen to a sound and find the right letter"
+msgstr "Lyssna på ett ljud och hitta rätt bokstav"
+
+#: src/bokstavsresan/main.py:368
+msgid "Sound Out Words"
+msgstr "Ljuda ord"
+
+#: src/bokstavsresan/main.py:369
+msgid "Break words into individual letter sounds"
+msgstr "Bryt ord i individuella bokstavsljud"
+
+#: src/bokstavsresan/main.py:388
+#, python-brace-format
+msgid "Letters mastered: {mastered}/29 | Total correct: {correct}"
+msgstr "Bokstäver bemästrade: {mastered}/29 | Totalt antal rätt: {correct}"
+
+#: src/bokstavsresan/main.py:412
+msgid "🔤 Tap a letter to hear it!"
+msgstr "🔤 Tryck på en bokstav för att höra den!"
+
+#: src/bokstavsresan/main.py:453
+msgid "🎯 Listen and find the letter!"
+msgstr "🎯 Lyssna och hitta bokstaven!"
+
+#: src/bokstavsresan/main.py:458
+msgid "🔊 Play sound again"
+msgstr "🔊 Spela ljudet igen"
+
+#: src/bokstavsresan/main.py:477
+msgid "Next letter ➡️"
+msgstr "Nästa bokstav ➡️"
+
+#: src/bokstavsresan/main.py:501
+msgid "📖 Sound out the word!"
+msgstr "📖 Ljuda ordet!"
+
+#: src/bokstavsresan/main.py:520
+msgid "🔊 Sound this letter"
+msgstr "🔊 Ljuda denna bokstav"
+
+#: src/bokstavsresan/main.py:525
+msgid "Next sound ➡️"
+msgstr "Nästa ljud ➡️"
+
+#: src/bokstavsresan/main.py:531
+msgid "New word 🔄"
+msgstr "Nytt ord 🔄"
+
+#: src/bokstavsresan/main.py:553
+#, python-brace-format
+msgid "{letter} — Name: '{name}', Sound: '{sound}'"
+msgstr "{letter} — Namn: '{name}', Ljud: '{sound}'"
+
+#: src/bokstavsresan/main.py:596
+#, python-brace-format
+msgid "🎯 Which letter says '{sound}'?"
+msgstr "🎯 Vilken bokstav säger '{sound}'?"
+
+#: src/bokstavsresan/main.py:614
+msgid "Correct!"
+msgstr "Rätt!"
+
+#: src/bokstavsresan/main.py:614
+msgid "Yes!"
+msgstr "Ja!"
+
+#: src/bokstavsresan/main.py:614
+msgid "Great!"
+msgstr "Fantastiskt!"
+
+#: src/bokstavsresan/main.py:669 src/bokstavsresan/main.py:710
+#, python-brace-format
+msgid "'{letter}' sounds like '{sound}'"
+msgstr "'{letter}' låter som '{sound}'"
+
+#: src/bokstavsresan/main.py:687
+#, python-brace-format
+msgid "You sounded out '{word}'! 🎉"
+msgstr "Du ljudade '{word}'! 🎉"
+
+#: src/bokstavsresan/main.py:697
+#, python-brace-format
+msgid "🎊 LEVEL UP! You're now level {level}! 🎊"
+msgstr "🎊 EN NIVÅ UPP! Du är nu på nivå {level}! 🎊"
+
+#: src/bokstavsresan/main.py:702
+msgid "Amazing! You did it!"
+msgstr "Fantastiskt! Du klarade det!"
+
+#: src/bokstavsresan/main.py:731
+msgid ""
+"Phonetics and letter learning game for children with dyspraxia.\n"
+"\n"
+"Learn letter names and sounds through interactive games. Features text-to-speech, progress tracking, and encouraging feedback to build confidence.\n"
+"\n"
+"Part of the Autismappar suite — free tools for communication and daily structure."
+msgstr ""
+"Fonetik- och bokstavslärospel för barn med dyspraxi.\n"
+"\n"
+"Lär dig bokstävernas namn och ljud genom interaktiva spel. Innehåller text-till-tal, framstegsspårning och uppmuntrande återkoppling för att bygga självförtroende.\n"
+"\n"
+"En del av Autismappar-paketet – gratis verktyg för kommunikation och daglig struktur."
+
+#: src/bokstavsresan/main.py:739
+msgid "Thanks to"
+msgstr "Tack till"
+
+#: src/bokstavsresan/main.py:781
+msgid "🎉 Du hittade hemligheten!"
+msgstr "🎉 Du hittade hemligheten!"
