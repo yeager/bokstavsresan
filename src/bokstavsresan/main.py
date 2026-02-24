@@ -80,6 +80,24 @@ TRY_AGAIN = [
 CONFIG_DIR = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "bokstavsresan"
 
 
+def _get_current_lang():
+    """Get current UI language code for TTS."""
+    import locale as _locale
+    lang = _locale.getlocale()[0] or "sv_SE"
+    if lang.startswith("sv"):
+        return "sv"
+    elif lang.startswith("en"):
+        return "en"
+    return "sv"  # default fallback
+
+
+# Map language codes to Piper voice model paths
+_PIPER_VOICES = {
+    "sv": "~/.local/share/piper-voices/sv_SE-nst-medium.onnx",
+    "en": "~/.local/share/piper-voices/en_US-lessac-medium.onnx",
+}
+
+
 def _get_tts_engine():
     """Get TTS engine: Piper first, espeak-ng fallback."""
     try:
@@ -101,11 +119,14 @@ def _speak(text, engine=None):
         engine = _get_tts_engine()
     if engine is None:
         return
+    lang = _get_current_lang()
     try:
         if engine == "piper":
+            model_path = os.path.expanduser(
+                _PIPER_VOICES.get(lang, _PIPER_VOICES["sv"])
+            )
             proc = subprocess.Popen(
-                ["piper", "--model",
-                 os.path.expanduser("~/.local/share/piper-voices/sv_SE-nst-medium.onnx"),
+                ["piper", "--model", model_path,
                  "--output-raw", "--length-scale", "1.5"],
                 stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
             )
@@ -117,7 +138,7 @@ def _speak(text, engine=None):
                 ).communicate(audio, timeout=10)
         elif engine == "espeak-ng":
             subprocess.run(
-                ["espeak-ng", "-v", "sv", text],
+                ["espeak-ng", "-v", lang, text],
                 capture_output=True, timeout=10,
             )
     except Exception:
