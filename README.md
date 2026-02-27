@@ -1,3 +1,5 @@
+> **⚠️ This app has been migrated to the Autismappar PWA at https://autismappar.se**
+
 # Bokstavsresan
 
 Phonetics and letter learning game for children with dyspraxia.
